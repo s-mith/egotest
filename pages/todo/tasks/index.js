@@ -22,7 +22,7 @@ export default function Home() {
 
 
     const refresh = async () => {
-        fetch(`http://`+ process.env.CAPI +`/api/todo/tasks`)
+        fetch(`https://`+ process.env.CAPI +`/api/todo/tasks`)
             .then(response => response.json())
             .then(data => setAssignments(data))
             .then(console.log(assignments))

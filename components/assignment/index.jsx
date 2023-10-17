@@ -15,7 +15,7 @@ const Assignment = ({ description, due, title, id}) => {
 
     const handleSubmit = async () => {
             
-            const response = await fetch(`http://`+ process.env.CAPI +`/api/todo/complete`, {
+            const response = await fetch(`https://`+ process.env.CAPI +`/api/todo/complete`, {
                 method: "POST",
                 body: JSON.stringify({ password: password, id: id }),
                 headers: {

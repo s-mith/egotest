@@ -6,7 +6,7 @@ const UserList = () => {
 
     const getusers = async () => {
       const myPromise = new Promise((resolve, reject) => {
-        fetch(`http://`+ process.env.CAPI +`/api/users`)
+        fetch(`https://`+ process.env.CAPI +`/api/users`)
           .then((response) => response.json())
           .then((data) => {
             resolve(data)
