@@ -19,7 +19,7 @@ export default function Home() {
 
 
     const refresh = async () => {
-        fetch("http://"+ process.env.CAPI +":3000/api/todo/repeat")
+        fetch(`http://`+ process.env.CAPI +`:3000/api/todo/repeat`)
             .then(response => response.json())
             .then(data => setAssignments(data))
             .then(console.log(assignments))

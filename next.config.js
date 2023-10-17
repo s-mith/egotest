@@ -11,7 +11,11 @@ const nextConfig = {
         permanent: true,
       },
     ]
-  }
+  }, 
+  env: {
+    API:"75.177.177.13",
+    CAPI:"leaf.xn--q9jyb4c"
+  },
 }
 
 module.exports = nextConfig

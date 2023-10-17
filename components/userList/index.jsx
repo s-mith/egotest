@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { Next}
 
 const UserList = () => {
     const [users, setUsers] = useState([])
 
     const getusers = async () => {
       const myPromise = new Promise((resolve, reject) => {
-        fetch(`http://"+ process.env.CAPI +":3000/api/users`)
+        fetch(`http://`+ process.env.CAPI +`:3000/api/users`)
           .then((response) => response.json())
           .then((data) => {
             resolve(data)
