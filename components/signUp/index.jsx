@@ -8,7 +8,7 @@ const SignUp = () => {
 
     const handleSubmit = async () => {
 
-        const response = await fetch(`http://"+ process.env.CAPI +":3000/api/user`, {
+        const response = await fetch(`http://"+ process.env.CAPI +"/api/user`, {
             method: "POST",
             body: JSON.stringify({ name: username, password: password }),
             headers: {

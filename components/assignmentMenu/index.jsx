@@ -62,7 +62,7 @@ const AssignmentMenu = ({ repeat }) => {
                 // send post request to api/todo/tasks
                 // 
                 console.log(password)
-                fetch(`http://`+ process.env.CAPI +`:3000/api/todo/assignments`, {
+                fetch(`http://`+ process.env.CAPI +`/api/todo/assignments`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -79,7 +79,7 @@ const AssignmentMenu = ({ repeat }) => {
                     .then(
                         
                         
-                        fetch(`http://`+ process.env.CAPI +`:3000/api/todo/complete`)
+                        fetch(`http://`+ process.env.CAPI +`/api/todo/complete`)
                         .then(response => response.json())
                         .then(data => setAssignments(data))
                         .then(console.log(assignments)))
@@ -151,7 +151,7 @@ const AssignmentMenu = ({ repeat }) => {
                                 let combined = hours + "." + minutes
                                 // for each day in days, send a post request to api/todo/repeat
                                 days.forEach((day) => {
-                                fetch(`http://`+ process.env.CAPI +`:3000/api/todo/repeat`, {
+                                fetch(`http://`+ process.env.CAPI +`/api/todo/repeat`, {
                                     method: "POST",
                                     headers: {
                                         "Content-Type": "application/json"
