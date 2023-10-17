@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     switch (method) {
         case "GET":
         try {
-            const response = await fetch(`https://`+ process.env.API +`:6969/api/repeat`);
+            const response = await fetch(`http://`+ process.env.API +`:6969/api/repeat`);
             const data = await response.json();
             res.status(200).json(data);
         } catch (error) {
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         break;
         case "POST":
         try {
-            const response = await fetch(`https://`+ process.env.API +`:6969/api/repeat`, {
+            const response = await fetch(`http://`+ process.env.API +`:6969/api/repeat`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

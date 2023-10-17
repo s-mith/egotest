@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         case "POST":
         try {
             // make a post request to the api with the user and password in the body
-            const response = await fetch(`https://`+ process.env.API +`:5005/user`, {
+            const response = await fetch(`http://`+ process.env.API +`:5005/user`, {
                 method: "POST",
                 body:JSON.stringify({
                     "name": req.body.name,
