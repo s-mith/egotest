@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* set dos.ttf as the global font */
+
+@font-face {
+  font-family: 'dos';
+  src: url('/dos.ttf');
+}
+
+body {
+  font-family: 'dos';
+}
