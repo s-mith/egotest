@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Next}
+
 
 const UserList = () => {
     const [users, setUsers] = useState([])
